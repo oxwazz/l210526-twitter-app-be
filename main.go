@@ -11,12 +11,28 @@ import (
 	"github.com/oxwazz/l210526-twitter-app-be/db"
 	"github.com/oxwazz/l210526-twitter-app-be/graph"
 	"github.com/oxwazz/l210526-twitter-app-be/graph/generated"
-	"os"
+	"github.com/spf13/viper"
 )
 
 func main() {
 
-	port := os.Getenv("PORT")
+	// Set the file name of the configurations file
+	viper.SetConfigName(".env")
+	viper.SetConfigType("env")
+
+	// Set the path to look for the configurations file
+	viper.AddConfigPath(".")
+
+	if err := viper.ReadInConfig(); err != nil {
+		fmt.Printf("Error reading config file, %s", err)
+	}
+
+	valueport, ok := viper.Get("PORT").(string)
+	if !ok {
+		fmt.Println("error ges")
+	}
+
+	//port := os.Getenv("PORT")
 
 	databases.Init()
 
@@ -41,6 +57,6 @@ func main() {
 		return nil
 	})
 
-	e.Logger.Fatal(e.Start(":" + port))
+	e.Logger.Fatal(e.Start(":" + valueport))
 
 }
