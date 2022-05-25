@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 
-	"github.com/oxwazz/twitter/config"
+	"l210526-twitter-app-be/config"
 
 	_ "github.com/lib/pq"
 )

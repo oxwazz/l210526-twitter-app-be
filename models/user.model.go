@@ -5,13 +5,13 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 	"fmt"
-	"github.com/oxwazz/twitter/helpers"
+	"l210526-twitter-app-be/helpers"
 	"net/http"
 	"reflect"
 	"strings"
 	"time"
 
-	"github.com/oxwazz/twitter/db"
+	"l210526-twitter-app-be/db"
 
 	"github.com/go-playground/validator/v10"
 )

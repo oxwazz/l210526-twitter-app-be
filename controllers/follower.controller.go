@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/oxwazz/twitter/models"
+	"l210526-twitter-app-be/models"
 
 	"github.com/labstack/echo"
 )

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/labstack/echo"
-	"github.com/oxwazz/twitter/app/entities"
-	"github.com/oxwazz/twitter/app/usecases"
+	"l210526-twitter-app-be/app/entities"
+	"l210526-twitter-app-be/app/usecases"
 	"net/http"
 )
 

@@ -6,10 +6,10 @@ package graph
 import (
 	"context"
 
-	"github.com/oxwazz/twitter/app/entities"
-	"github.com/oxwazz/twitter/app/entities/repositories"
-	"github.com/oxwazz/twitter/graph/generated"
-	"github.com/oxwazz/twitter/graph/model"
+	"l210526-twitter-app-be/app/entities"
+	"l210526-twitter-app-be/app/entities/repositories"
+	"l210526-twitter-app-be/graph/generated"
+	"l210526-twitter-app-be/graph/model"
 )
 
 func (r *mutationResolver) CreateTweet(ctx context.Context, input model.NewTweet) (*entities.Tweet, error) {

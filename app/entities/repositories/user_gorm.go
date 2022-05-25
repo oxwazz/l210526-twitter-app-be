@@ -2,9 +2,9 @@ package repositories
 
 import (
 	"fmt"
-	"github.com/oxwazz/twitter/app/entities"
-	"github.com/oxwazz/twitter/app/entities/databases"
-	"github.com/oxwazz/twitter/helpers"
+	"l210526-twitter-app-be/app/entities"
+	"l210526-twitter-app-be/app/entities/databases"
+	"l210526-twitter-app-be/helpers"
 )
 
 func FetchAllUser[U []*entities.User | []entities.User]() (U, error) {

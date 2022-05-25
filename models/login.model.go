@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/oxwazz/twitter/helpers"
+	"l210526-twitter-app-be/helpers"
 
-	"github.com/oxwazz/twitter/db"
+	"l210526-twitter-app-be/db"
 )
 
 type Userr struct {

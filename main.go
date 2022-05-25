@@ -6,11 +6,11 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	controllers "github.com/oxwazz/twitter/app/deliveries"
-	"github.com/oxwazz/twitter/app/entities/databases"
-	"github.com/oxwazz/twitter/db"
-	"github.com/oxwazz/twitter/graph"
-	"github.com/oxwazz/twitter/graph/generated"
+	controllers "l210526-twitter-app-be/app/deliveries"
+	"l210526-twitter-app-be/app/entities/databases"
+	"l210526-twitter-app-be/db"
+	"l210526-twitter-app-be/graph"
+	"l210526-twitter-app-be/graph/generated"
 )
 
 func main() {

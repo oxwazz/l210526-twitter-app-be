@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/oxwazz/twitter/graph"
-	"github.com/oxwazz/twitter/graph/generated"
+	"l210526-twitter-app-be/graph"
+	"l210526-twitter-app-be/graph/generated"
 	"log"
 	"net/http"
 	"os"

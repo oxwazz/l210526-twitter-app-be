@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/99designs/gqlgen/graphql"
-	"github.com/oxwazz/twitter/helpers"
+	"l210526-twitter-app-be/helpers"
 )
 
 func MarshalNullString(ns helpers.NullString) graphql.Marshaler {
