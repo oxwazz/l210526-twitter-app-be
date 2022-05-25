@@ -11,9 +11,12 @@ import (
 	"github.com/oxwazz/l210526-twitter-app-be/db"
 	"github.com/oxwazz/l210526-twitter-app-be/graph"
 	"github.com/oxwazz/l210526-twitter-app-be/graph/generated"
+	"os"
 )
 
 func main() {
+
+	port := os.Getenv("PORT")
 
 	databases.Init()
 
@@ -38,6 +41,6 @@ func main() {
 		return nil
 	})
 
-	e.Logger.Fatal(e.Start(":1234"))
+	e.Logger.Fatal(e.Start(":" + port))
 
 }
