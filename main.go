@@ -5,7 +5,6 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
 	controllers "github.com/oxwazz/l210526-twitter-app-be/app/deliveries"
 	"github.com/oxwazz/l210526-twitter-app-be/app/entities/databases"
 	"github.com/oxwazz/l210526-twitter-app-be/db"
@@ -32,9 +31,7 @@ func main() {
 		fmt.Println(333310, "sdfsdf")
 		graphqlHandler.ServeHTTP(c.Response(), c.Request())
 		return nil
-	}, middleware.JWTWithConfig(middleware.JWTConfig{
-		SigningKey: []byte("secret-key"),
-	}))
+	})
 
 	e.GET("/playground", func(c echo.Context) error {
 		playgroundHandler.ServeHTTP(c.Response(), c.Request())
