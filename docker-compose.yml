@@ -1,0 +1,17 @@
+version: "3.1"
+   
+services:
+  pgdb:
+      image: postgres:alpine
+      container_name: pgdb-twitter-clone
+      environment:
+        - POSTGRES_DB=twitter
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      ports:
+        - "5432:5432"
+      volumes:
+        - pgdatas:/var/lib/postgresql/data/
+#        - ./tmp:/var/lib/postgresql/data/
+volumes:
+    pgdatas:

@@ -1,0 +1,44 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+
+type User {
+  id: NullString!
+  created_at: Time
+  updated_at: Time
+  name: String
+  date_of_birth: CustomTime
+  email: NullString
+  username: NullString
+  phone: NullString
+  password: String
+  tweets: [Tweet!]!
+}
+#
+type Tweet {
+  id: ID!
+  created_at: Time
+  updated_at: Time
+  Content: String
+#  Attachment: AttachmentWrapper
+  user: User!
+}
+
+type Query {
+  users: [User!]!
+  tweets: [Tweet!]!
+}
+
+input NewTweet {
+  Content: String!
+  userId: String!
+}
+
+type Mutation {
+  createTweet(input: NewTweet!): Tweet!
+}
+
+scalar Time
+scalar CustomTime
+scalar NullString
