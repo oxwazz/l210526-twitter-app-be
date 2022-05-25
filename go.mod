@@ -1,4 +1,5 @@
-module l210526-twitter-app-be
+module github.com/oxwazz/l210526-twitter-app-be
+//module l210526-twitter-app-be
 //module github.com/oxwazz/twitter
 
 go 1.18

@@ -14,10 +14,10 @@ import (
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
-	"l210526-twitter-app-be/app/entities"
-	"l210526-twitter-app-be/graph/model"
-	"l210526-twitter-app-be/graph/scalar"
-	"l210526-twitter-app-be/helpers"
+	"github.com/oxwazz/l210526-twitter-app-be/app/entities"
+	"github.com/oxwazz/l210526-twitter-app-be/graph/model"
+	"github.com/oxwazz/l210526-twitter-app-be/graph/scalar"
+	"github.com/oxwazz/l210526-twitter-app-be/helpers"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )

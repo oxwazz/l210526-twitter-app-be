@@ -2,9 +2,9 @@ package usecases
 
 import (
 	"fmt"
-	"l210526-twitter-app-be/app/entities"
-	"l210526-twitter-app-be/app/entities/repositories"
-	"l210526-twitter-app-be/helpers"
+	"github.com/oxwazz/l210526-twitter-app-be/app/entities"
+	"github.com/oxwazz/l210526-twitter-app-be/app/entities/repositories"
+	"github.com/oxwazz/l210526-twitter-app-be/helpers"
 )
 
 func FetchAllUser() ([]entities.User, error) {

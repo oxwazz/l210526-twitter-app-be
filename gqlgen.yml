@@ -45,21 +45,21 @@ autobind:
 # your liking
 models:
   NullString:
-    model: l210526-twitter-app-be/graph/scalar.NullString
+    model: github.com/oxwazz/l210526-twitter-app-be/graph/scalar.NullString
   CustomTime:
-    model: l210526-twitter-app-be/graph/scalar.CustomTime
+    model: github.com/oxwazz/l210526-twitter-app-be/graph/scalar.CustomTime
   User:
-    model: l210526-twitter-app-be/app/entities.User
+    model: github.com/oxwazz/l210526-twitter-app-be/app/entities.User
     fields:
       todos:
         resolver: true # force a resolver to be generated
   Tweet:
-    model: l210526-twitter-app-be/app/entities.Tweet
+    model: github.com/oxwazz/l210526-twitter-app-be/app/entities.Tweet
     fields:
       user:
         resolver: true # force a resolver to be generated
   Todo:
-    model: l210526-twitter-app-be/graph/models.Todo
+    model: github.com/oxwazz/l210526-twitter-app-be/graph/models.Todo
     fields:
       user:
         resolver: true # force a resolver to be generated

@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"l210526-twitter-app-be/app/entities"
-	"l210526-twitter-app-be/app/entities/databases"
+	"github.com/oxwazz/l210526-twitter-app-be/app/entities"
+	"github.com/oxwazz/l210526-twitter-app-be/app/entities/databases"
 )
 
 //func FetchTweetByID(ID string) (*entities.Tweet, error) {

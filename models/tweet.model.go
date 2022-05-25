@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"l210526-twitter-app-be/db"
+	"github.com/oxwazz/l210526-twitter-app-be/db"
 
 	"github.com/go-playground/validator/v10"
 )

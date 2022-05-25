@@ -1,6 +1,6 @@
 package models
 
-import "l210526-twitter-app-be/helpers"
+import "github.com/oxwazz/l210526-twitter-app-be/helpers"
 
 type Todo struct {
 	ID     string             `json:"id"`

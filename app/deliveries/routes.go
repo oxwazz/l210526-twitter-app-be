@@ -2,10 +2,10 @@ package controllers
 
 import (
 	"github.com/labstack/echo/middleware"
-	controllers2 "l210526-twitter-app-be/app/controllers"
+	controllers2 "github.com/oxwazz/l210526-twitter-app-be/app/controllers"
 	"net/http"
 
-	"l210526-twitter-app-be/controllers"
+	"github.com/oxwazz/l210526-twitter-app-be/controllers"
 
 	"github.com/labstack/echo"
 )

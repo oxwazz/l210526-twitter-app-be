@@ -4,8 +4,8 @@ import (
 	"database/sql/driver"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-playground/validator/v10"
+	"github.com/oxwazz/l210526-twitter-app-be/helpers"
 	"golang.org/x/crypto/bcrypt"
-	"l210526-twitter-app-be/helpers"
 	"reflect"
 	"time"
 )
