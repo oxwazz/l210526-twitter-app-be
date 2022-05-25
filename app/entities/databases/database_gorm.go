@@ -1,9 +1,8 @@
 package databases
 
 import (
-	"fmt"
 	_ "github.com/lib/pq"
-	"github.com/spf13/viper"
+	"github.com/oxwazz/l210526-twitter-app-be/helpers"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -26,22 +25,9 @@ func Init() {
 		},
 	)
 
-	viper.SetConfigName(".env")
-	viper.SetConfigType("env")
+	port := helpers.GetEnv("DB_PORT")
 
-	// Set the path to look for the configurations file
-	viper.AddConfigPath(".")
-
-	if err := viper.ReadInConfig(); err != nil {
-		fmt.Printf("Error reading config file, %s", err)
-	}
-
-	_, ok := viper.Get("DB_PORT").(string)
-	if !ok {
-		fmt.Println("error ges")
-	}
-
-	dsn := "host=ec2-54-204-56-171.compute-1.amazonaws.com user=uzdkdicohqwhzh password=8b25c1f23ca21c0a826597ca2a0c33c3b7c9215d369b2dd1278c52161a7c3668 dbname=daj6o8hv12hgm8 port=" + os.Getenv("DB_PORT")
+	dsn := "host=ec2-54-204-56-171.compute-1.amazonaws.com user=uzdkdicohqwhzh password=8b25c1f23ca21c0a826597ca2a0c33c3b7c9215d369b2dd1278c52161a7c3668 dbname=daj6o8hv12hgm8 port=" + port
 	//dsn := "host=localhost user=postgres password=postgres dbname=twitter port=5432 sslmode=disable"
 	db2, err2 = gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: newLogger,
