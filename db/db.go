@@ -3,8 +3,6 @@ package db
 import (
 	"database/sql"
 
-	"github.com/oxwazz/l210526-twitter-app-be/config"
-
 	_ "github.com/lib/pq"
 )
 
@@ -12,11 +10,12 @@ var db *sql.DB
 var err error
 
 func Init() {
-	conf := config.GetConfig()
+	//conf := config.GetConfig()
 
 	// connStr := "postgres://pqgotest:password@localhost/pqgotest?sslmode=verify-full"
 
-	connectionString := "postgres://" + conf.DB_USERNAME + ":" + conf.DB_PASSWORD + "@" + conf.DB_HOST + ":" + conf.DB_PORT + "/" + conf.DB_NAME + "?sslmode=disable"
+	//connectionString := "postgres://" + conf.DB_USERNAME + ":" + conf.DB_PASSWORD + "@" + conf.DB_HOST + ":" + conf.DB_PORT + "/" + conf.DB_NAME + "?sslmode=disable"
+	connectionString := "postgres://" + "uzdkdicohqwhzh" + ":" + "8b25c1f23ca21c0a826597ca2a0c33c3b7c9215d369b2dd1278c52161a7c3668" + "@" + "ec2-54-204-56-171.compute-1.amazonaws.com" + ":" + "5432" + "/" + "daj6o8hv12hgm8"
 
 	db, err = sql.Open("postgres", connectionString)
 	if err != nil {
