@@ -1,7 +1,6 @@
 module github.com/oxwazz/l210526-twitter-app-be
-//module l210526-twitter-app-be
-//module github.com/oxwazz/twitter
 
+// +heroku goVersion go1.18
 go 1.18
 
 require (
