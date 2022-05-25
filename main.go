@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/labstack/echo"
@@ -28,7 +27,6 @@ func main() {
 	playgroundHandler := playground.Handler("GraphQL", "/query")
 
 	e.POST("/query", func(c echo.Context) error {
-		fmt.Println(333310, "sdfsdf")
 		graphqlHandler.ServeHTTP(c.Response(), c.Request())
 		return nil
 	})
