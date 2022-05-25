@@ -12,6 +12,7 @@ import (
 	"github.com/oxwazz/l210526-twitter-app-be/graph"
 	"github.com/oxwazz/l210526-twitter-app-be/graph/generated"
 	"github.com/spf13/viper"
+	"os"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func main() {
 		fmt.Printf("Error reading config file, %s", err)
 	}
 
-	valueport, ok := viper.Get("PORT").(string)
+	_, ok := viper.Get("PORT").(string)
 	if !ok {
 		fmt.Println("error ges")
 	}
@@ -57,6 +58,6 @@ func main() {
 		return nil
 	})
 
-	e.Logger.Fatal(e.Start(":" + valueport))
+	e.Logger.Fatal(e.Start(":" + os.Getenv("PO")))
 
 }

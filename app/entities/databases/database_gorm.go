@@ -36,12 +36,12 @@ func Init() {
 		fmt.Printf("Error reading config file, %s", err)
 	}
 
-	valueport, ok := viper.Get("DB_PORT").(string)
+	_, ok := viper.Get("DB_PORT").(string)
 	if !ok {
 		fmt.Println("error ges")
 	}
 
-	dsn := "host=ec2-54-204-56-171.compute-1.amazonaws.com user=uzdkdicohqwhzh password=8b25c1f23ca21c0a826597ca2a0c33c3b7c9215d369b2dd1278c52161a7c3668 dbname=daj6o8hv12hgm8 port=" + valueport
+	dsn := "host=ec2-54-204-56-171.compute-1.amazonaws.com user=uzdkdicohqwhzh password=8b25c1f23ca21c0a826597ca2a0c33c3b7c9215d369b2dd1278c52161a7c3668 dbname=daj6o8hv12hgm8 port=" + os.Getenv("DB_PORT")
 	//dsn := "host=localhost user=postgres password=postgres dbname=twitter port=5432 sslmode=disable"
 	db2, err2 = gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: newLogger,
